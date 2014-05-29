@@ -1,0 +1,14 @@
+/.idea/*
+.DS_Store
+/.bundle
+/log/*.log
+/tmp
+/spec/fixtures/*.yml
+public/uploads
+config/database.yml
+config/ldap.yml
+config/em_reporting.yml
+config/content_repo.yml
+spec/fixtures/jasmine/*.json
+spec/fixtures/jasmine/*.html
+public/assets/

@@ -1,0 +1,22 @@
+<h1>Certified ScrumMaster® Picker</h1>
+
+<div ng-controller="PickerCtrl">
+  <form class="add-form" ng-submit="addScrummer()">
+    <input type="text" ng-model="newScrummer.name" placeholder="Name">
+    <label>
+      <input type="checkbox" ng-model="newScrummer.team"> developer?
+    </label>
+    <button class="btn btn-default" type="submit">Add</button>
+  </form>
+
+  <ul class="list-group scrummers">
+    <li class="list-group-item scrummer" ng-class="{ 'list-group-item-success': scrummer.pair_number === 1, 'list-group-item-danger': scrummer.pair_number === 2}" ng-repeat="scrummer in scrummers">
+      <span class="glyphicon glyphicon-remove" ng-click="removeScrummer($index)"></span>
+      <span class="name">{{scrummer.name}}</span>
+      <span ng-show="scrummer.master" class="">MASTER OF SCRUM</span>
+    </li>
+  </ul>
+
+  <button class="btn btn-success" ng-click="pick()">ScrumTime!</button>
+
+</div>
